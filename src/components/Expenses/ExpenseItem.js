@@ -3,7 +3,7 @@ import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
 import Card from "./UI/Card";
 
-const ExpenseItem = (props) => {
+function ExpenseItem(props) {
   const [title, setTitle ] = useState(props.title);
   console.log(title)
   const clickerHandler = () => {
