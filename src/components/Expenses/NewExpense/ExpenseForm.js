@@ -27,11 +27,10 @@ function ExpenseForm(props) {
       date: new Date(enteredDate),
     };
 
-    props.submissionExpenseData(expenseData)
+    props.submissionExpenseData(expenseData);
     setEnteredAmount("");
     setEnteredDate("");
     setEnteredTitle("");
-
   }
 
   return (
@@ -53,8 +52,8 @@ function ExpenseForm(props) {
             type="number"
             min="0.01"
             step="0.01"
-            onChange={amountChangeHandler}
             value={enteredAmount}
+            onChange={amountChangeHandler}
           ></input>
         </div>
         <div className="new-expense__control">
@@ -62,9 +61,9 @@ function ExpenseForm(props) {
           <input
             type="date"
             min="2018-01-01"
-            max="2022-10-20"
-            onChange={dateChangeHandler}
+            max="2023-10-20"
             value={enteredDate}
+            onChange={dateChangeHandler}
           ></input>
         </div>
       </div>
