@@ -6,7 +6,8 @@ function Chart(props) {
   const dataPointValues = props.amountPoints.map((amountPoint) => amountPoint.value)
   const maximum = Math.max(...dataPointValues)
 
-  return (
+  if (maximum > 0) {
+    return (
     <div className="chart">
       {props.amountPoints.map((amountPoint) => (
         <ChartBar
@@ -17,7 +18,7 @@ function Chart(props) {
         />
       ))}
     </div>
-  );
+  )};
 }
 
 export default Chart;
