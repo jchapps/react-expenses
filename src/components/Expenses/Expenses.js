@@ -21,9 +21,8 @@ function Expenses(props) {
         selected={filteredYear}
         onChangeFilter={filterChangeHandler}
       />
-      {filteredExpenses.length === 0 ? (
-        <p>Expenses not found. </p>
-      ) : (
+      {filteredExpenses.length === 0 && <p>Expenses not found. </p>}
+      {filteredExpenses.length > 0 &&
         filteredExpenses.map((expense) => {
           return (
             <ExpenseItem
@@ -33,8 +32,7 @@ function Expenses(props) {
               key={expense.id}
             />
           );
-        })
-      )}
+        })}
     </Card>
   );
 }
